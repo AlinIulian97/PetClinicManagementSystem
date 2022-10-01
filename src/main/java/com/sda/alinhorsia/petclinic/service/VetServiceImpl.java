@@ -1,9 +1,13 @@
 package com.sda.alinhorsia.petclinic.service;
 
+import com.sda.alinhorsia.petclinic.model.Vet;
 import com.sda.alinhorsia.petclinic.repository.VetRepository;
+
+import java.util.List;
 
 public class VetServiceImpl implements VetService {
     private final VetRepository vetRepository;
+
 
     public VetServiceImpl(VetRepository vetRepository) {
         this.vetRepository = vetRepository;
@@ -25,5 +29,10 @@ public class VetServiceImpl implements VetService {
         }
         vetRepository.createVet(firstName, lastName, address, speciality);
 
+    }
+
+    @Override
+    public List<Vet> getAllVets() {
+        return vetRepository.getAllVets();
     }
 }

@@ -1,5 +1,6 @@
 package com.sda.alinhorsia.petclinic.controller;
 
+import com.sda.alinhorsia.petclinic.model.Vet;
 import com.sda.alinhorsia.petclinic.service.VetService;
 
 import java.util.Scanner;
@@ -27,6 +28,13 @@ public class VetController {
             System.out.println("INVALID DATA:" + e.getMessage());
         } catch (Exception e) {
             System.out.println("INTERNAL SERVER ERROR" + e.getMessage());
+        }
+    }
+
+    public void showAllVets(){
+        System.out.println("Vet List: " );
+        for(Vet vet : vetService.getAllVets()){
+            System.out.println(vet.getId()+ " " + vet.getFirstName()+ " " + vet.getLastName());
         }
     }
 }

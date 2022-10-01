@@ -1,7 +1,7 @@
 DONE PCMS_1:SETUP hibernate infrastructure.
 DONE PCMS_2:SETUP hibernate model
 DONE PCMS_3:SETUP aplication architecture.
-PCMS_4:Implement a way for the user to interect with the system.
+DONE PCMS_4:Implement a way for the user to interect with the system.
 
 
 
@@ -11,7 +11,7 @@ PCMS_6:As a user i should be able to view the details of an existent veterinaria
 PCMS_7:As a user I should be able to update all existing veterinarian by chosing the id. i should be albe to edit:
   firstName/lastName/adress/speciality
 PCMS_8:As a user i should e able to delete an existing veterinarian by choosing the id.
-PCMS_9:As a user I should be able to view all vets. i should be able to view the following data:  firstName/lastName/id
+DONE PCMS_9:As a user I should be able to view all vets. i should be able to view the following data:  firstName/lastName/id
 
 
 PCMS_10:As a user i should be able to add a new pet. i should be able to specify race/birthdate/isVaccinated/ownerName
