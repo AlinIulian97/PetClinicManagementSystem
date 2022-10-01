@@ -23,4 +23,6 @@ public interface VetRepository {
                        String address,
                        String speciality
     );
+
+    void deleteVetById(int id);
 }
