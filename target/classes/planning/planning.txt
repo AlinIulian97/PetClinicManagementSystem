@@ -1,0 +1,33 @@
+#Aplication
++ the users will interact with the system via a comand line interface where he/she can chose an option
++ the desktop willl not have any visual frindly frames
+
+#Vet
+ +As a user i should be able to add a new veterinarian. i should be able to specify firstName/lastName/adress/speciality
+ +As a user i should be able to view the details of an existent veterinarian. i should be able to view the folllowing data:
+ firstName/lastName/adress/speciality/id
+ +As a user I should be able to update all existing veterinarian by chosing the id. i should be albe to edit:
+  firstName/lastName/adress/speciality
+ +As a user i should e able to delete an existing veterinarian by choosing the id.
+ +As a user I should be able to view all vets. i should be able to view the following data:  firstName/lastName/id
+
+#Pet
+ +As a user i should be able to add a new pet. i should be able to specify race/birthdate/isVaccinated/ownerName
+ +As a user i should be able to view the details of an existent pet. i should be able to view the folllowing data:
+ race/birthdate/isVaccinated/ownerName/id
+ +As a user I should be able to update all existing pet by chosing the id. i should be albe to edit:
+ race/birthdate/isVaccinated/ownerName
+ +As a user i should e able to delete an existing pet by choosing the id.
+ +As a user I should be able to view all pets. i should be able to view the following data:  race/ownerName/id
+
+#Consult
+ +As a user I should be able to add Consult. I should be able to specify: vet id(of existing vet), pet id(of existing pet), date, description.
+ +As a user i should ne able to view alll the consults. i should be able to view the following data:
+ consult id, vet id(of existing vet), pet id(of existing pet), date, description.
+ +AS a user i should be able too update only the descriptionfor a specific consult by choosing the id
+
+ #Import data
+ +As a user I should ne able to import alll the data from CSV file
+
+ #Optional
+ +As a user i should be able to authentificate before using the aplication.vet and an existing pet; updating the description of a consult
