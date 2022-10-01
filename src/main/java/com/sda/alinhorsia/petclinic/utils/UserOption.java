@@ -3,6 +3,7 @@ package com.sda.alinhorsia.petclinic.utils;
 public enum UserOption {
     ADD_VET(1, "Add a new vet"),
     VIEW_ALL_VETS(2, "View all vets"),
+    VIEW_VET_BY_ID(3,"Vet by id"),
     EXIT(99, "Exit!"),
     UNKNOWN (999999,"!Invalid option selected!");
     private final int numericOption;

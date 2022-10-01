@@ -3,6 +3,8 @@ package com.sda.alinhorsia.petclinic.controller;
 import com.sda.alinhorsia.petclinic.model.Vet;
 import com.sda.alinhorsia.petclinic.service.VetService;
 
+import java.util.InputMismatchException;
+import java.util.Optional;
 import java.util.Scanner;
 
 public class VetController {
@@ -35,6 +37,23 @@ public class VetController {
         System.out.println("Vet List: " );
         for(Vet vet : vetService.getAllVets()){
             System.out.println(vet.getId()+ " " + vet.getFirstName()+ " " + vet.getLastName());
+        }
+    }
+
+    public void showVetById(){
+        try{
+        System.out.println("Please insert an id:" );
+        int chooseId = Integer.parseInt(scanner.nextLine().trim());
+        Optional<Vet> optionalVet = vetService.findById(chooseId);
+        if(optionalVet.isPresent()){
+            System.out.println((optionalVet.get()));
+        }else {
+            System.out.println("vet not found");
+        }
+        }catch (NumberFormatException e){
+            System.err.println("!Invalid Id Format");
+        }catch (Exception e ){
+            System.err.println("Internal sesion erore");
         }
     }
 }

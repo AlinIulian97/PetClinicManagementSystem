@@ -16,16 +16,23 @@ public class Main {
         UserOption userOption;
         Scanner scanner = new Scanner(System.in);
         do{
-            UserOption.displayAllOptions();
-            System.out.println("Please select an option: ");
-            int numericOption = scanner.nextInt();
-            userOption = UserOption.findByNumericOption(numericOption);
+            try {
+                UserOption.displayAllOptions();
+                System.out.println("Please select an option: ");
+                int numericOption = Integer.parseInt(scanner.nextLine().trim());
+                userOption = UserOption.findByNumericOption(numericOption);
+            }catch(NumberFormatException e){
+                userOption = UserOption.UNKNOWN;
+            }
             switch (userOption){
                 case ADD_VET:
                     vetController.createVet();
                     break;
                 case VIEW_ALL_VETS:
                     vetController.showAllVets();
+                    break;
+                case VIEW_VET_BY_ID:
+                    vetController.showVetById();
                     break;
                 case UNKNOWN:
                     System.err.println("!INVALID OPTION SELECTED!");

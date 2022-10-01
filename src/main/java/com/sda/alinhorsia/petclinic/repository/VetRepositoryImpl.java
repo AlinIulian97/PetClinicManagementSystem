@@ -6,6 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import java.util.List;
+import java.util.Optional;
 
 public class VetRepositoryImpl implements VetRepository {
     @Override
@@ -36,5 +37,13 @@ public class VetRepositoryImpl implements VetRepository {
           List<Vet> allVets = session.createQuery("FROM Vet", Vet.class).getResultList();
            return allVets;
        }
+    }
+
+    @Override
+    public Optional<Vet> findById(int id) {
+        try (Session session = SessionManager.getSessionFactory().openSession()){
+            Vet vet = session.find(Vet.class, id);
+            return  Optional.ofNullable(vet);
+        }
     }
 }
