@@ -4,11 +4,13 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
+
 @Table (name = "vet")
 public class Vet {
     @Id
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private Integer id;
     @Column ( name = "first_name")
     private String firstName;
     @Column  (name = "last_name")
@@ -26,18 +28,20 @@ public class Vet {
     public Vet(){
     }
 
-    public Vet(int id, String firstName, String lastName, String address) {
+    public Vet(Integer id, String firstName, String lastName, String address, String speciality, List<Consult> consults) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
+        this.speciality = speciality;
+        this.consults = consults;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
