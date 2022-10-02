@@ -29,4 +29,4 @@ TODO PCMS_16:As a user i should ne able to view alll the consults. i should be a
 TODO PCMS_17:AS a user i should be able too update only the descriptionfor a specific consult by choosing the id
 
 
-LETS DO IT PCMS_18:As a user I should ne able to import alll the data from CSV file
+DONE PCMS_18:As a user I should ne able to import alll the data from CSV file

@@ -9,6 +9,7 @@ public enum UserOption {
     ADD_PET(6, "ADD a new Pet"),
     IMPORT_VETS(7, "Import vets"),
     IMPORT_PETS(8, "Import pets"),
+    CREATE_CONSULT (9, "Create consult"),
     EXIT(99, "Exit!"),
     UNKNOWN (999999,"!Invalid option selected!");
     private final int numericOption;
