@@ -3,6 +3,7 @@ package com.sda.alinhorsia.petclinic.controller;
 import com.sda.alinhorsia.petclinic.model.Vet;
 import com.sda.alinhorsia.petclinic.service.VetService;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Optional;
 import java.util.Scanner;
@@ -90,6 +91,16 @@ public class VetController {
             System.out.print(e.getMessage());
         } catch (Exception e) {
             System.err.println("Internal sesion erore");
+        }
+    }
+
+    public void importVets() {
+        try {
+            System.out.println("Import vets started");
+            vetService.importVets();
+            System.out.println("Import vets finished!");
+        } catch (IOException e) {
+            System.out.println("IMPORT VETS FAIELD");
         }
     }
 }

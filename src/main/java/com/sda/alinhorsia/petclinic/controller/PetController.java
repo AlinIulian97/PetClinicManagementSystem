@@ -2,6 +2,7 @@ package com.sda.alinhorsia.petclinic.controller;
 
 import com.sda.alinhorsia.petclinic.service.PetService;
 
+import java.io.IOException;
 import java.sql.Date;
 import java.text.ParseException;
 import java.time.DateTimeException;
@@ -37,6 +38,16 @@ public class PetController {
             System.err.println(" INVALID DATA " + e.getMessage());
         } catch (Exception e) {
             System.err.println(" INTERNAL SERVER ERROR" + e.getMessage());
+        }
+    }
+
+    public void importPets(){
+        try {
+            System.out.println("Import pets started");
+            petService.importPets();
+            System.out.println("Imports pet finish");
+        }catch (IOException e){
+            System.out.println("Import pets faild");
         }
     }
 }
